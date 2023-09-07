@@ -1,0 +1,126 @@
+:root {
+    --pri-colo: #44c3fa;
+    --mb-2: 1rem;
+    --mb-4: 2rem;
+    --while-col: aliceblue;
+    --black-col: #000;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrap-con {
+    background-color: var(--pri-colo);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.img-con {
+    width: 50%;
+}
+
+.img-con img {
+    width: 100%;
+    height: 100vh;
+}
+
+.home__social {
+    padding: 20px;
+}
+
+.home__social-icon {
+    font-size: 25px;
+    padding: 10px;
+    color: var(--black-col);
+    background-color: var(--while-col);
+    border-radius: 20px;
+}
+
+.r-form-con {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.from-box {
+    padding: 20px;
+    width: 400px;
+    background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.from-box :where(input, select) {
+    font-size: 25px;
+    padding: 0px 30px;
+    color: #f05e61;
+}
+
+select {
+    text-align: center;
+    color: #f05e61;
+}
+
+.from-box :where(input, select, button, .btn) {
+    margin: 10px 0;
+    width: 100%;
+    height: 55px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.btn {
+    cursor: pointer;
+    color: aliceblue;
+    font-size: 25px;
+    padding: 0 17px;
+    background-image: linear-gradient(-225deg, #FF057C 0%, #7C64D5 48%, #4CC3FF 100%);
+    border: 1px solid grey;
+}
+
+.from-box h1 {
+    color: #f05e61;
+}
+
+input::placeholder {
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0.5;
+    color: red;
+    text-align: center;
+}
+
+#result-val {
+    /* height: 0; */
+    /* opacity: 0; */
+    display: none;
+}
+
+@media (max-width: 540px) {
+    .wrap-con {
+        flex-direction: column-reverse;
+    }
+    .img-con {
+        width: 100%;
+        z-index: 111;
+    }
+    .r-form-con,
+    select {
+        width: 80%;
+        margin-inline: auto;
+        margin-top: 60px;
+        overflow: hidden;
+    }
+}
+
